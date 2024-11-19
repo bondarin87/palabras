@@ -8,3 +8,12 @@ btn.addEventListener('click', function func() {
     btn.removeEventListener('click', func)
 }
     )
+    
+btn1.addEventListener('click', function func1() {
+    for (let i=0; i<elems.length; i++) {
+        elems[i].textContent = elems[i].textContent.substring(0,elems[i].textContent.length - 1);
+        
+    }
+    btn1.removeEventListener('click', func1)
+}
+    )
