@@ -1,19 +1,10 @@
-let inp = document.querySelector('#elem');
-let text =document.querySelector('#text');
-let temp ='';
-inp.addEventListener('blur',function func() {
-    let arr = inp.value.split(''); 
-   
-    for (let i=arr.length-1; i>=0; i--) {
-       
-        temp = temp + arr[i];
-   
-    } 
-    if (inp.value === temp){
-        text.textContent = 'Muy bien!!!';
-    } else {
-        text.textContent = 'Intenta otra vez!'
+let elems = document.querySelectorAll('p');
+let btn = document.querySelector('#btn');
+
+btn.addEventListener('click', function func() {
+    for (let i=0; i<elems.length; i++) {
+        elems[i].textContent += (i+1);
     }
-     
-    
-})
+    btn.removeEventListener('click', func)
+}
+    )
